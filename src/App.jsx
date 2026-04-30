@@ -11,7 +11,7 @@ const products = productsFromServer.map(product => {
     categoriesFromServer.find(category => category.id === product.categoryId) ||
     null;
   const userById =
-    usersFromServer.find(user => user.id === category.ownerId) || null;
+    usersFromServer.find(user => user.id === categoryById.ownerId) || null;
 
   return {
     ...product,
